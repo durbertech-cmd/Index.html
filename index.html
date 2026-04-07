@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Mini App Ads</title>
+    <title>Make Fussion</title>
     
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
@@ -11,63 +11,66 @@
 
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1c1c1c;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #000000;
             color: white;
+            margin: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
-        }
-        .container {
             text-align: center;
-            padding: 20px;
-            border-radius: 15px;
-            background: #2b2b2b;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            width: 80%;
         }
-        h1 { font-size: 20px; margin-bottom: 20px; }
-        .ad-status {
-            color: #4CAF50;
-            font-size: 14px;
-            margin-top: 10px;
+        .card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            width: 85%;
         }
-        .btn-refresh {
-            background: #0088cc;
-            color: white;
-            padding: 10px 20px;
+        .logo { width: 80px; margin-bottom: 15px; }
+        h1 { font-size: 24px; margin: 10px 0; color: #f39c12; }
+        p { color: #888; font-size: 14px; }
+        .btn {
+            background: #f39c12;
+            color: black;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
             margin-top: 20px;
+            width: 100%;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Monetag Ad Integration</h1>
-        <p>Ads should appear automatically based on your zone settings.</p>
+    <div class="card">
+        <img src="https://durbertech-cmd.github.io/Index.html/1000030605.png" class="logo" alt="Logo">
+        <h1>Make Fussion</h1>
+        <p>Click below to load ads and support us.</p>
         
-        <div id="status" class="ad-status">SDK Loaded...</div>
-        
-        <button class="btn-refresh" onclick="location.reload()">Refresh Page</button>
+        <button class="btn" onclick="showAd()">Show Ads</button>
     </div>
 
     <script>
-        // Telegram Web App Initialization
         const tg = window.Telegram.WebApp;
-        tg.expand(); // Full screen korar jonno
+        tg.ready();
+        tg.expand();
 
-        // Ad trigger check (Optional)
+        function showAd() {
+            // Monetag SDK auto call korbe, refresh dileo ad ashbe
+            location.reload();
+        }
+
+        // Automatic ad call
         window.onload = function() {
-            console.log("Page loaded, Monetag SDK active.");
-            document.getElementById('status').innerText = "Ads are being served.";
+            if (typeof show_10843667 === 'function') {
+                show_10843667();
+            }
         };
     </script>
-
 </body>
 </html>
